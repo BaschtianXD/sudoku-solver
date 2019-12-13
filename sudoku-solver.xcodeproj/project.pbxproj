@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D6CA18DE23993E6C002BF205 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CA18DD23993E6C002BF205 /* main.swift */; };
+		D6CA18E523993F22002BF205 /* SudokuBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CA18E423993F22002BF205 /* SudokuBoard.swift */; };
+		D6E3B21C23A2D301006F8678 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3B21B23A2D301006F8678 /* Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		D6CA18DA23993E6C002BF205 /* sudoku-solver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sudoku-solver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CA18DD23993E6C002BF205 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D6CA18E423993F22002BF205 /* SudokuBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuBoard.swift; sourceTree = "<group>"; };
+		D6E3B21B23A2D301006F8678 /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				D6CA18DD23993E6C002BF205 /* main.swift */,
+				D6CA18E423993F22002BF205 /* SudokuBoard.swift */,
+				D6E3B21B23A2D301006F8678 /* Solver.swift */,
 			);
 			path = "sudoku-solver";
 			sourceTree = "<group>";
@@ -120,7 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CA18E523993F22002BF205 /* SudokuBoard.swift in Sources */,
 				D6CA18DE23993E6C002BF205 /* main.swift in Sources */,
+				D6E3B21C23A2D301006F8678 /* Solver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
