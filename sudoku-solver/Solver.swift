@@ -41,6 +41,10 @@ class Solver {
 		
 		solverloop: while working.contains(0) && somethingdone {
 			
+			if !hasOptionsLeft() {
+				return SudokuBoard(values: working)
+			}
+			
 			somethingdone = false
 			
 			//check if there is a field in which we can only put a single number
@@ -148,6 +152,26 @@ class Solver {
 					}
 				}
 			}
+			
+			let lowesOptionIndex = options.enumerated()
+				.map({ (index: $0.0, min: $0.1.count) })
+				.reduce((index: 0, min: 10), { $0.min > $1.min ? $1 : $0 })
+				.index
+			
+			for (index, option) in options[lowesOptionIndex].enumerated() {
+				if option {
+					var dec = working
+					dec[lowesOptionIndex] = index + 1
+					
+					let decSolver = Solver(sudoku: SudokuBoard(values: dec))
+					
+					let decResult = decSolver.solve()
+					
+					if decResult.isDone() {
+						return decResult
+					}
+				}
+			}
 		}
 		
 		
@@ -172,6 +196,18 @@ class Solver {
 			//square
 			options[square + (i / 3) * 9 + i % 3][newValue-1] = false
 		}
+	}
+	
+	func hasOptionsLeft() -> Bool {
+		
+		// check if the board is still solvable
+		for i in 0..<81 {
+			if working[i] != 0 && options[i].count == 0 {
+				return false
+			}
+		}
+		
+		return true
 	}
 	
 	enum checks {

@@ -46,19 +46,3 @@ if solvedBoard.isDone() {
 	print("I couldn't finish it... 😢\nThis is how far I got:")
 }
 print(solvedBoard)
-
-/*
-
-needs to be solved:
-.......47
-.....3..8
-.9...6...
-.64.8..5.
-..5...79.
-....62...
-1..8.....
-4.21.....
-......5.4
-*/
-
-
